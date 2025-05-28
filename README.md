@@ -1,10 +1,10 @@
-📊 Automatiserat Arbetsflöde för Datakvalitet i Banktransaktioner
+## 📊 Automatiserat Arbetsflöde för Datakvalitet i Banktransaktioner
 Ett samarbetsprojekt där vi simulerar ett automatiserat datakvalitetsflöde i en svensk bankmiljö. Projektet fokuserar på datavalidering, flödesautomation, felsökning och rapportering.
 
-📁 Projektbeskrivning
+## 📁 Projektbeskrivning
 I detta projekt simulerar vi en verklighetstrogen arbetsmiljö där en bank hanterar över en miljon transaktioner per dag. Målet är att automatisera hela flödet från inläsning av CSV-filer till validering, databaslagring och generering av rapporter kring datakvalitet.
 
-✅ Funktioner
+## ✅ Funktioner
 Automatisk inläsning av transaktionsdata (CSV)
 
 Validering av fält (negativa belopp, saknade värden m.m.)
@@ -21,7 +21,7 @@ Kodtestning med pytest
 
 Versionering och samarbeten via Git/GitHub
 
-🧠 Lärandemål
+## 🧠 Lärandemål
 Förståelse för ETL-processer (Extract, Transform, Load)
 
 Praktisk tillämpning av datakvalitetsprinciper
@@ -32,7 +32,7 @@ Automatisering av dataprocesser med moderna verktyg
 
 Användning av branching och versionkontroll i Git
 
-🛠 Teknikstack
+## 🛠 Teknikstack
 Verktyg / Teknik	Syfte
 Python	Databehandling, validering, skript
 PostgreSQL	Databaslagring
@@ -44,9 +44,8 @@ Git / GitHub	Versionshantering och samarbete
 pytest	Automatisk testning
 Trello	SCRUM och grupporganisation
 
-🚀 Kom igång
-1. Klona repot och skapa virtual environment
-2. 
+## 🚀 Kom igång
+1. Klona repot och skapa virtual environment: 
 git clone https://github.com/angelbra/Projekt-Automatiserat-arbetsfl-automatiserade-rutiner.git
 cd Projekt-Automatiserat-arbetsfl-automatiserade-rutiner
 
@@ -60,11 +59,11 @@ Via Docker eller lokalt – se alembic.ini för DB-inställningar.
 4. Kör Alembic-migreringar
 alembic upgrade head
 
-🧪 Testning
+## 🧪 Testning
 Kör testerna med:
 pytest
 
-📘 Dokumentation
+## 📘 Dokumentation
 Se mappen notebooks/ för Jupyter Notebooks där vi:
 
 Validerar data
@@ -73,12 +72,12 @@ Visar statistik på datakvalitet
 
 Testar olika scenarier
 
-👥 Gruppmedlemmar
+## 👥 Gruppmedlemmar
 [Ditt Namn] – Automatisering & dokumentation
 
 [Namn] – Validering & databasstruktur
 
-[Namn] – Prefect & rapportering
+Angelica B – Prefect & rapportering
 
 [Namn] – Git/GitHub & SCRUM-ledare
 
