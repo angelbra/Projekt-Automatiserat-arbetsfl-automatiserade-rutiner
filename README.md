@@ -25,7 +25,7 @@ Att skapa ett arbetsflöde som:
 ## 🚀 Kom igång
 1. Sätt upp projektmiljön
 
-git clone https://github.com/WeeHorse/python-bank.git
+git clone https://github.com/angelbra/Projekt-Automatiserat-arbetsfl-automatiserade-rutiner.git
 cd python-bank
 git checkout projekt_start
 
