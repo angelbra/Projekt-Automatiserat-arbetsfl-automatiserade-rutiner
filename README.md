@@ -1,3 +1,45 @@
+# 💼 Automatiserat arbetsflöde för datakvalitet i en svensk bank
+
+Detta projekt simulerar ett verkligt bankscenario där cirka **1 miljon transaktioner per dag** behandlas. Syftet är att utveckla ett **automatiserat arbetsflöde** som säkerställer **hög datakvalitet** genom validering, migrering och rapportering. Projektet är en del av Data Manager-utbildningen vid TUC Yrkeshögskola.
+
+## 🧠 Syfte
+
+Att skapa ett arbetsflöde som:
+- Läser och validerar stora mängder transaktionsdata (CSV)
+- Rensar och laddar data till en databas (PostgreSQL)
+- Automatiserar processen via ett workflow-verktyg (Prefect)
+- Säkerställer spårbarhet och rollback vid fel
+- Genererar rapporter om datakvalitet
+
+## 🛠️ Teknisk översikt
+
+- **Python** – Databehandling och validering
+- **PostgreSQL** – Lagring av transaktionsdata
+- **SQLAlchemy + Alembic** – Databasmodellering och migrering
+- **Prefect** – Workflow-automatisering
+- **Jupyter Notebooks** – Dokumentation och analys
+- **pytest** – Testning
+- **GitHub / Git** – Versionshantering
+- **SCRUM / Trello** – Projektstyrning
+
+## 📁 Projektstruktur
+
+```bash
+.
+├── alembic/               # Databas-migreringsfiler
+├── data/                  # CSV-filer med transaktioner
+├── notebooks/             # Jupyter Notebooks för analys och rapport
+├── src/
+│   ├── database.py        # DB-anslutning
+│   ├── models.py          # SQLAlchemy-modeller
+│   ├── import_transactions.py # Import av validerad data
+│   └── workflow.py        # Prefect-arbetsflöde
+├── tests/                 # pytest-tester
+├── requirements.txt       # Projektberoenden
+└── README.md              # Projektbeskrivning
+
+
+
 ## 💼 Automatiserat Dataflöde för Svenska Banktransaktioner
 Ett samarbetsprojekt från Yrkeshögskolan där vi simulerar ett verkligt banksystem. Systemet hanterar cirka 1 miljon transaktioner per dag, med automatiserade arbetsflöden för datavalidering och hög datakvalitet genom strukturerade pipelines och felsäkringsmekanismer.
 
