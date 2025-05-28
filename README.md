@@ -1,11 +1,11 @@
-💼 Automatiserat Dataflöde för Svenska Banktransaktioner
+## 💼 Automatiserat Dataflöde för Svenska Banktransaktioner
 Ett samarbetsprojekt från Yrkeshögskolan där vi simulerar ett verkligt banksystem. Systemet hanterar cirka 1 miljon transaktioner per dag, med automatiserade arbetsflöden för datavalidering och hög datakvalitet genom strukturerade pipelines och felsäkringsmekanismer.
 
-📚 Projektöversikt
+## 📚 Projektöversikt
 Fallstudie:
 En svensk bank tar dagligen emot stora mängder transaktionsdata i CSV-format, inklusive både inhemska och internationella överföringar. Dessa kan innehålla potentiella fel eller tecken på bedrägeri.
 
-Projektets mål:
+## Projektets mål:
 
 ✅ Automatiskt läsa in och validera CSV-filer
 ✅ Rensa, transformera och lagra data i en PostgreSQL-databas
@@ -13,7 +13,7 @@ Projektets mål:
 ✅ Bygga ett automatiserat och återanvändbart arbetsflöde
 ✅ Spåra och rapportera datakvalitetsproblem
 
-🛠 Teknikstack
+## 🛠 Teknikstack
 Python – databehandling och automatisering
 
 PostgreSQL – relationsdatabas för säker datalagring
@@ -30,7 +30,7 @@ Alembic / Flask-Migrate – databas-migreringar
 
 pytest – automatiserade tester
 
-🚀 Kom igång
+## 🚀 Kom igång
 1. Sätt upp projektmiljön
 
 git clone https://github.com/WeeHorse/python-bank.git
@@ -43,7 +43,7 @@ source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 Starta PostgreSQL (antingen lokalt eller med Docker) och se till att din DATABASE_URL är korrekt inställd i .env eller i alembic.ini.
 
-📌 Syfte
+## 📌 Syfte
 Läsa in stora transaktionsvolymer (CSV-format)
 
 Validera och filtrera ogiltig data
@@ -58,5 +58,5 @@ Korrekt data laddas till databasen
 
 Rapportering sker automatiskt i slutet av varje körning
 
-👥 Projektteam
+## 👥 Projektteam
 Detta projekt genomfördes av studenter vid TUC Yrkeshögskola i kursen Datakvalitet och Databashantering, som en del av Data Manager-programmet.
