@@ -55,8 +55,10 @@ I detta projekt simulerar vi en verklighetstrogen arbetsmiljö där en bank hant
  * Trello	SCRUM och grupporganisation
 
 ## 🚀 Kom igång
-1. Klona repot och skapa virtual environment: 
+1. Klona repot och skapa virtual environment:
+   
 git clone https://github.com/angelbra/Projekt-Automatiserat-arbetsfl-automatiserade-rutiner.git
+---
 cd Projekt-Automatiserat-arbetsfl-automatiserade-rutiner
 
 python -m venv venv
