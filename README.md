@@ -1,48 +1,33 @@
-# Automatiserat arbetsflöde
 
-Detta projekt är ett automatiserat arbetsflöde för en simulerad svensk bank. Syftet är att automatisera rutinuppgifter såsom datavalidering, migrering och rapportgenerering.
-
----
-
-## Projektbeskrivning
-
-Projektet inkluderar:
-
-- Läsning av kund- och transaktionsdata från Excel- och CSV-filer  
-- Validering av transaktioner för att säkerställa datakvalitet  
-- Migrering av data till en SQLite-databas  
-- Generering av rapporter för analys och insikt  
-- Automatisering av hela processen med Prefect
-
----
-
-## Projektstruktur
-
-
-
-
-## 📊 Automatiserat Arbetsflöde för Datakvalitet i Banktransaktioner
+# 📊 Automatiserat Arbetsflöde för Datakvalitet i Banktransaktioner
 Ett samarbetsprojekt där vi simulerar ett automatiserat datakvalitetsflöde i en svensk bankmiljö. Projektet fokuserar på datavalidering, flödesautomation, felsökning och rapportering.
 
-## 📁 Projektbeskrivning
+---
+
+# 📁 Projektbeskrivning
 I detta projekt simulerar vi en verklighetstrogen arbetsmiljö där en bank hanterar över en miljon transaktioner per dag. Målet är att automatisera hela flödet från inläsning av CSV-filer till validering, databaslagring och generering av rapporter kring datakvalitet.
 
+---
+
 ## ✅ Funktioner
-Automatisk inläsning av transaktionsdata (CSV)
 
-Validering av fält (negativa belopp, saknade värden m.m.)
+-Automatisk inläsning av transaktionsdata (CSV)
 
-Transaktionshantering med rollback
+-Validering av fält (negativa belopp, saknade värden m.m.)
 
-Databaslagring med PostgreSQL
+-Transaktionshantering med rollback
 
-Automatiserat arbetsflöde med Prefect
+-Databaslagring med PostgreSQL
 
-Rapporter kring datakvalitet
+-Automatiserat arbetsflöde med Prefect
 
-Kodtestning med pytest
+-Rapporter kring datakvalitet
+
+-Kodtestning med pytest
 
 Versionering och samarbeten via Git/GitHub
+
+---
 
 ## 🧠 Lärandemål
 Förståelse för ETL-processer (Extract, Transform, Load)
