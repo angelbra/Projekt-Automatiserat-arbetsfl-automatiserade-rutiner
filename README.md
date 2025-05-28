@@ -1,3 +1,26 @@
+# Automatiserat arbetsflöde
+
+Detta projekt är ett automatiserat arbetsflöde för en simulerad svensk bank. Syftet är att automatisera rutinuppgifter såsom datavalidering, migrering och rapportgenerering.
+
+---
+
+## Projektbeskrivning
+
+Projektet inkluderar:
+
+- Läsning av kund- och transaktionsdata från Excel- och CSV-filer  
+- Validering av transaktioner för att säkerställa datakvalitet  
+- Migrering av data till en SQLite-databas  
+- Generering av rapporter för analys och insikt  
+- Automatisering av hela processen med Prefect
+
+---
+
+## Projektstruktur
+
+
+
+
 ## 📊 Automatiserat Arbetsflöde för Datakvalitet i Banktransaktioner
 Ett samarbetsprojekt där vi simulerar ett automatiserat datakvalitetsflöde i en svensk bankmiljö. Projektet fokuserar på datavalidering, flödesautomation, felsökning och rapportering.
 
