@@ -102,13 +102,16 @@ Se mappen notebooks/ för Jupyter Notebooks där vi:
 ---
 
 ## 👥 Gruppmedlemmar
-  – Automatisering & dokumentation
 
-[Namn] – Validering & databasstruktur
+Alaa Al-Moayed
 
-Angelica B – Prefect & rapportering
+Marziyeh Akbari
 
-[Namn] – Git/GitHub & SCRUM-ledare
+Angelica Bracamonte
+
+Alice Nguyen
+
+Saher Raja
 
 ---
 
