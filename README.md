@@ -4,53 +4,55 @@ Ett samarbetsprojekt där vi simulerar ett automatiserat datakvalitetsflöde i e
 
 ---
 
-# 📁 Projektbeskrivning
+## 📁 Projektbeskrivning
 I detta projekt simulerar vi en verklighetstrogen arbetsmiljö där en bank hanterar över en miljon transaktioner per dag. Målet är att automatisera hela flödet från inläsning av CSV-filer till validering, databaslagring och generering av rapporter kring datakvalitet.
 
 ---
 
 ## ✅ Funktioner
 
--Automatisk inläsning av transaktionsdata (CSV)
+- Automatisk inläsning av transaktionsdata (CSV)
 
--Validering av fält (negativa belopp, saknade värden m.m.)
+- Validering av fält (negativa belopp, saknade värden m.m.)
 
--Transaktionshantering med rollback
+- Transaktionshantering med rollback
 
--Databaslagring med PostgreSQL
+- Databaslagring med PostgreSQL
 
--Automatiserat arbetsflöde med Prefect
+- Automatiserat arbetsflöde med Prefect
 
--Rapporter kring datakvalitet
+- Rapporter kring datakvalitet
 
--Kodtestning med pytest
+- Kodtestning med pytest
 
-Versionering och samarbeten via Git/GitHub
+- Versionering och samarbeten via Git/GitHub
 
 ---
 
 ## 🧠 Lärandemål
-Förståelse för ETL-processer (Extract, Transform, Load)
 
-Praktisk tillämpning av datakvalitetsprinciper
+- Förståelse för ETL-processer (Extract, Transform, Load)
 
-Arbete i grupp med SCRUM-metodik (Trello)
+- Praktisk tillämpning av datakvalitetsprinciper
 
-Automatisering av dataprocesser med moderna verktyg
+- Arbete i grupp med SCRUM-metodik (Trello)
 
-Användning av branching och versionkontroll i Git
+- Automatisering av dataprocesser med moderna verktyg
+
+- Användning av branching och versionkontroll i Git
 
 ## 🛠 Teknikstack
-Verktyg / Teknik	Syfte
-Python	Databehandling, validering, skript
-PostgreSQL	Databaslagring
-Prefect	Automatisering av arbetsflöden
-SQLAlchemy	Objekt-Relationell Mapping (ORM)
-Alembic / Flask-Migrate	Databasmigrationer
-Jupyter Notebook	Prototypning och testning
-Git / GitHub	Versionshantering och samarbete
-pytest	Automatisk testning
-Trello	SCRUM och grupporganisation
+ 
+ * Verktyg / Teknik	Syfte
+ * Python	Databehandling, validering, skript
+ * PostgreSQL	Databaslagring
+ * Prefect	Automatisering av arbetsflöden
+ * SQLAlchemy	Objekt-Relationell Mapping (ORM)
+ * Alembic / Flask-Migrate	Databasmigrationer
+ * Jupyter Notebook	Prototypning och testning
+ * Git / GitHub	Versionshantering och samarbete
+ * pytest	Automatisk testning
+ * Trello	SCRUM och grupporganisation
 
 ## 🚀 Kom igång
 1. Klona repot och skapa virtual environment: 
@@ -61,10 +63,10 @@ python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
-3. Starta databasen (PostgreSQL)
+2. Starta databasen (PostgreSQL)
 Via Docker eller lokalt – se alembic.ini för DB-inställningar.
 
-4. Kör Alembic-migreringar
+3. Kör Alembic-migreringar
 alembic upgrade head
 
 ## 🧪 Testning
@@ -74,14 +76,14 @@ pytest
 ## 📘 Dokumentation
 Se mappen notebooks/ för Jupyter Notebooks där vi:
 
-Validerar data
+- Validerar data
 
-Visar statistik på datakvalitet
+- Visar statistik på datakvalitet
 
-Testar olika scenarier
+- Testar olika scenarier
 
 ## 👥 Gruppmedlemmar
-[Ditt Namn] – Automatisering & dokumentation
+  – Automatisering & dokumentation
 
 [Namn] – Validering & databasstruktur
 
