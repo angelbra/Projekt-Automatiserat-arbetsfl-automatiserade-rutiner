@@ -1,43 +1,86 @@
-# 💼 Automatiserat arbetsflöde för datakvalitet i en svensk bank
+📊 Automatiserat Arbetsflöde för Datakvalitet i Banktransaktioner
+Ett samarbetsprojekt där vi simulerar ett automatiserat datakvalitetsflöde i en svensk bankmiljö. Projektet fokuserar på datavalidering, flödesautomation, felsökning och rapportering.
 
-Detta projekt simulerar ett verkligt bankscenario där cirka **1 miljon transaktioner per dag** behandlas. Syftet är att utveckla ett **automatiserat arbetsflöde** som säkerställer **hög datakvalitet** genom validering, migrering och rapportering. Projektet är en del av Data Manager-utbildningen vid TUC Yrkeshögskola.
+📁 Projektbeskrivning
+I detta projekt simulerar vi en verklighetstrogen arbetsmiljö där en bank hanterar över en miljon transaktioner per dag. Målet är att automatisera hela flödet från inläsning av CSV-filer till validering, databaslagring och generering av rapporter kring datakvalitet.
 
-## 🧠 Syfte
+✅ Funktioner
+Automatisk inläsning av transaktionsdata (CSV)
 
-Att skapa ett arbetsflöde som:
-- Läser och validerar stora mängder transaktionsdata (CSV)
-- Rensar och laddar data till en databas (PostgreSQL)
-- Automatiserar processen via ett workflow-verktyg (Prefect)
-- Säkerställer spårbarhet och rollback vid fel
-- Genererar rapporter om datakvalitet
+Validering av fält (negativa belopp, saknade värden m.m.)
 
-## 🛠️ Teknisk översikt
+Transaktionshantering med rollback
 
-- **Python** – Databehandling och validering
-- **PostgreSQL** – Lagring av transaktionsdata
-- **SQLAlchemy + Alembic** – Databasmodellering och migrering
-- **Prefect** – Workflow-automatisering
-- **Jupyter Notebooks** – Dokumentation och analys
-- **pytest** – Testning
-- **GitHub / Git** – Versionshantering
-- **SCRUM / Trello** – Projektstyrning
+Databaslagring med PostgreSQL
 
-## 🚀 Kom igång
-1. Sätt upp projektmiljön
+Automatiserat arbetsflöde med Prefect
 
+Rapporter kring datakvalitet
+
+Kodtestning med pytest
+
+Versionering och samarbeten via Git/GitHub
+
+🧠 Lärandemål
+Förståelse för ETL-processer (Extract, Transform, Load)
+
+Praktisk tillämpning av datakvalitetsprinciper
+
+Arbete i grupp med SCRUM-metodik (Trello)
+
+Automatisering av dataprocesser med moderna verktyg
+
+Användning av branching och versionkontroll i Git
+
+🛠 Teknikstack
+Verktyg / Teknik	Syfte
+Python	Databehandling, validering, skript
+PostgreSQL	Databaslagring
+Prefect	Automatisering av arbetsflöden
+SQLAlchemy	Objekt-Relationell Mapping (ORM)
+Alembic / Flask-Migrate	Databasmigrationer
+Jupyter Notebook	Prototypning och testning
+Git / GitHub	Versionshantering och samarbete
+pytest	Automatisk testning
+Trello	SCRUM och grupporganisation
+
+🚀 Kom igång
+1. Klona repot och skapa virtual environment
+2. 
 git clone https://github.com/angelbra/Projekt-Automatiserat-arbetsfl-automatiserade-rutiner.git
-cd python-bank
-git checkout projekt_start
+cd Projekt-Automatiserat-arbetsfl-automatiserade-rutiner
 
 python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
-
+source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
-Starta PostgreSQL (antingen lokalt eller med Docker) och se till att din DATABASE_URL är korrekt inställd i .env eller i alembic.ini.
 
-## 👥 Projektteam
-Detta projekt genomfördes av studenter vid TUC Yrkeshögskola i kursen Datakvalitet och Databashantering, som en del av Data Manager-programmet.
+3. Starta databasen (PostgreSQL)
+Via Docker eller lokalt – se alembic.ini för DB-inställningar.
 
-📄 Licens
-MIT License. Endast för utbildningssyfte.
+4. Kör Alembic-migreringar
+alembic upgrade head
 
+🧪 Testning
+Kör testerna med:
+pytest
+
+📘 Dokumentation
+Se mappen notebooks/ för Jupyter Notebooks där vi:
+
+Validerar data
+
+Visar statistik på datakvalitet
+
+Testar olika scenarier
+
+👥 Gruppmedlemmar
+[Ditt Namn] – Automatisering & dokumentation
+
+[Namn] – Validering & databasstruktur
+
+[Namn] – Prefect & rapportering
+
+[Namn] – Git/GitHub & SCRUM-ledare
+
+🧾 Licens
+Projektet är en del av undervisningen på [TUC Yrkeshögskola – Data Manager].
