@@ -41,5 +41,3 @@ Detta projekt genomfördes av studenter vid TUC Yrkeshögskola i kursen Datakval
 📄 Licens
 MIT License. Endast för utbildningssyfte.
 
-yaml
-
