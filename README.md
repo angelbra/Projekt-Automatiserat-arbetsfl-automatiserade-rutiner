@@ -57,23 +57,38 @@ I detta projekt simulerar vi en verklighetstrogen arbetsmiljö där en bank hant
 ## 🚀 Kom igång
 1. Klona repot och skapa virtual environment:
    
-git clone https://github.com/angelbra/Projekt-Automatiserat-arbetsfl-automatiserade-rutiner.git
+git clone
+
 ---
+https://github.com/angelbra/Projekt-Automatiserat-arbetsfl-automatiserade-rutiner.git
+
+---
+
 cd Projekt-Automatiserat-arbetsfl-automatiserade-rutiner
+
+---
 
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
+---
+
 2. Starta databasen (PostgreSQL)
 Via Docker eller lokalt – se alembic.ini för DB-inställningar.
 
-3. Kör Alembic-migreringar
+---
+
+4. Kör Alembic-migreringar
 alembic upgrade head
+
+---
 
 ## 🧪 Testning
 Kör testerna med:
 pytest
+
+---
 
 ## 📘 Dokumentation
 Se mappen notebooks/ för Jupyter Notebooks där vi:
@@ -84,6 +99,8 @@ Se mappen notebooks/ för Jupyter Notebooks där vi:
 
 - Testar olika scenarier
 
+---
+
 ## 👥 Gruppmedlemmar
   – Automatisering & dokumentation
 
@@ -92,6 +109,8 @@ Se mappen notebooks/ för Jupyter Notebooks där vi:
 Angelica B – Prefect & rapportering
 
 [Namn] – Git/GitHub & SCRUM-ledare
+
+---
 
 🧾 Licens
 Projektet är en del av undervisningen på [TUC Yrkeshögskola – Data Manager].
