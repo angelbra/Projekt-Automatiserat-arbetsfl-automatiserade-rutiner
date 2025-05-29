@@ -1,98 +1,119 @@
-# Automatiserat arbetsflöde för banktransaktioner
 
-Detta projekt automatiserar validering, behandling och lagring av banktransaktioner med hjälp av **Prefect** – ett workflow management-verktyg i Python.
-Det inkluderar datavalidering, databaslagring, transaktionsbearbetning och rapportgenerering.
-
+# 📊 Automatiserat Arbetsflöde för Datakvalitet i Banktransaktioner
+Ett samarbetsprojekt där vi simulerar ett automatiserat datakvalitetsflöde i en svensk bankmiljö. Projektet fokuserar på datavalidering, flödesautomation, felsökning och rapportering.
 
 ---
 
-## Workflow Automation & Orchestration
-
-- **Roll:** DevOps / Workflow Engineer  
-- **Verktyg:**
-- Prefect
-- Python
-- Pandas
-- SQLite
-
-**Huvudfil:** `Bank Workflow Prefect.py`
-
+## 📁 Projektbeskrivning
+I detta projekt simulerar vi en verklighetstrogen arbetsmiljö där en bank hanterar över en miljon transaktioner per dag. Målet är att automatisera hela flödet från inläsning av CSV-filer till validering, databaslagring och generering av rapporter kring datakvalitet.
 
 ---
 
-## Funktioner
+## ✅ Funktioner
 
-1. Läser kund- och transaktionsdata från CSV
-2. Skapar SQLite-databas med två tabeller
-3. Sparar data i databasen
-4. Validerar transaktioner (kontrollerar giltiga konton)
-5. Genererar rapport med Pandas (från CSV)
-6. Genererar rapport med SQL (från databasen)
+- Automatisk inläsning av transaktionsdata (CSV)
 
----
+- Validering av fält (negativa belopp, saknade värden m.m.)
 
-## Leverabler
+- Transaktionshantering med rollback
 
-| Filtyp         | Filnamn                    | Beskrivning                          |
-|----------------|----------------------------|--------------------------------------|
-| Python-script  | `Bank_workflow_prefect.py` | Huvudfil för arbetsflödet            |
-| docker         | ` Dockerfile`              | Isolera miljön                       |
-| Dokumentation  | `README.md`                | Projektbeskrivning och instruktioner |
-| execution logs |  `Loggfil.txt `            | körlogg - logg från arbetsflödet     |
-|  Python-paket  | ` requirements.txt    `    |  snabbt installera alla beroenden    |
-| notebook       | ` db innehål.ipynb    `    | sammanfattning db innehåll           |
+- Databaslagring med PostgreSQL
+
+- Automatiserat arbetsflöde med Prefect
+
+- Rapporter kring datakvalitet
+
+- Kodtestning med pytest
+
+- Versionering och samarbeten via Git/GitHub
 
 ---
 
-# Projekt-bank_workflow
+## 🧠 Lärandemål
 
-Detta projekt implementerar ett automatiserat arbetsflöde med **Prefect** för att bearbeta bankdata.
+- Förståelse för ETL-processer (Extract, Transform, Load)
 
-## Funktionalitet
+- Praktisk tillämpning av datakvalitetsprinciper
 
-- Läser kund- och transaktionsdata från CSV-filer
-- Skapar och laddar data till en SQLite-databas
-- Validerar transaktioner mot kundtabellen
-- Genererar rapporter både från CSV-filer och från databasen
-- Felhantering med rollback vid databasoperationer
+- Arbete i grupp med SCRUM-metodik (Trello)
 
-## Krav
+- Automatisering av dataprocesser med moderna verktyg
 
-- Python 3.8 eller senare
-- Prefect
-- Pandas
-- SQLite
+- Användning av branching och versionkontroll i Git
 
-## Användning
-källor: 
-transactions.csv — innehåller alla transaktioner (pengar som skickas eller tas emot).
-sebank_customers_with_accounts.csv — innehåller kunddata och kontoinformation.
+## 🛠 Teknikstack
+ 
+ * Verktyg / Teknik	Syfte
+ * Python	Databehandling, validering, skript
+ * PostgreSQL	Databaslagring
+ * Prefect	Automatisering av arbetsflöden
+ * SQLAlchemy	Objekt-Relationell Mapping (ORM)
+ * Alembic / Flask-Migrate	Databasmigrationer
+ * Jupyter Notebook	Prototypning och testning
+ * Git / GitHub	Versionshantering och samarbete
+ * pytest	Automatisk testning
+ * Trello	SCRUM och grupporganisation
 
-github källor: 
-https://github.com/WeeHorse/python-bank-project-start/blob/main/data/transactions.csv
-https://github.com/WeeHorse/python-bank-project-start/blob/main/data/sebank_customers_with_accounts.csv
+## 🚀 Kom igång
+1. Klona repot och skapa virtual environment:
+   
+git clone
 
-Klona repo:
-git clone https://github.com/angelbra/Projekt-bank_workflow.git
-cd Projekt-bank_workflow
+---
+https://github.com/angelbra/Projekt-Automatiserat-arbetsfl-automatiserade-rutiner.git
 
-## Installation och körning
-Skapa och aktivera virtuell miljö:
+---
 
-**Windows:**
+cd Projekt-Automatiserat-arbetsfl-automatiserade-rutiner
+
+---
+
 python -m venv venv
-.\venv\Scripts\activate
-
-**Linux/macOS:**
-python3 -m venv venv
-
-source venv/bin/activate
-
-##Installera beroenden
-För att installera de nödvändiga paketen, kör följande kommando i terminalen:
-
+source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 
-##Kör workflow:
-python bank_workflow_prefect.py
+---
 
+2. Starta databasen (PostgreSQL)
+Via Docker eller lokalt – se alembic.ini för DB-inställningar.
+
+---
+
+4. Kör Alembic-migreringar
+alembic upgrade head
+
+---
+
+## 🧪 Testning
+Kör testerna med:
+pytest
+
+---
+
+## 📘 Dokumentation
+Se mappen notebooks/ för Jupyter Notebooks där vi:
+
+- Validerar data
+
+- Visar statistik på datakvalitet
+
+- Testar olika scenarier
+
+---
+
+## 👥 Gruppmedlemmar
+
+Alaa Al-Moayed
+
+Marziyeh Akbari
+
+Angelica Bracamonte
+
+Alice Nguyen
+
+Saher Raja
+
+---
+
+🧾 Licens
+Projektet är en del av undervisningen på [TUC Yrkeshögskola – Data Manager].
