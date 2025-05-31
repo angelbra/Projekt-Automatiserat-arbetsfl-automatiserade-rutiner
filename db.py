@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from modeller import Base
 
-DATABASE_URL = "postgresql+psycopg2://akkangell:Angelica.1@localhost:5432/your_database"
+DATABASE_URL = "postgresql+psycopg2://tucgirls:1234@localhost:5431/tucdb"
 
 engine = create_engine(DATABASE_URL)
 
@@ -17,6 +17,6 @@ def init_db():
 if __name__ == "__main__":
     try:
         init_db()
-        print("✅ Tablas creadas correctamente en la base de datos.")
+        print("✅ data ready.")
     except Exception as e:
-        print("❌ Error al crear las tablas:", e)
+        print("❌ Error ", e)

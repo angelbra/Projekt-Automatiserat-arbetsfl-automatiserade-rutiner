@@ -1,0 +1,10 @@
+(venv) PS C:\Users\Angelica\OneDrive\Escritorio\code\Datakvalitet\Projekt-bank_workflow> python first_data_insertio.py
+✅ Ny testkund har lagts till.
+(venv) PS C:\Users\Angelica\OneDrive\Escritorio\code\Datakvalitet\Projekt-bank_workflow> python db.py
+✅ data ready.
+(venv) PS C:\Users\Angelica\OneDrive\Escritorio\code\Datakvalitet\Projekt-bank_workflow> python modeller.py
+(venv) PS C:\Users\Angelica\OneDrive\Escritorio\code\Datakvalitet\Projekt-bank_workflow> python koppling.py
+✅ Ansluten till PostgreSQL-databas!
+📦 Version: PostgreSQL 16.4 (Debian 16.4-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+🔌 Anslutningen har stängts.
+(venv) PS C:\Users\Angelica\OneDrive\Escritorio\code\Datakvalitet\Projekt-bank_workflow> 
