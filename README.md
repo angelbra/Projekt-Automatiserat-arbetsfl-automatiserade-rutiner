@@ -79,7 +79,7 @@ Via Docker eller lokalt – se alembic.ini för DB-inställningar.
 
 ---
 
-4. Kör Alembic-migreringar
+4. Kör main.py
 
 ---
 
