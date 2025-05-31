@@ -8,3 +8,51 @@
 📦 Version: PostgreSQL 16.4 (Debian 16.4-1.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
 🔌 Anslutningen har stängts.
 (venv) PS C:\Users\Angelica\OneDrive\Escritorio\code\Datakvalitet\Projekt-bank_workflow> 
+
+
+##______________________________________________________________________________________________###
+
+(venv) PS C:\Users\Angelica\OneDrive\Escritorio\code\Datakvalitet\Projekt-bank_workflow> python main.py
+starting....
+Insert data...
+Kunden finns redan, inga data läggs till.
+workflow on...
+00:38:31.721 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8655
+See https://docs.prefect.io/3.0/manage/self-host#self-host-a-prefect-server for more information on running a dedicated Prefect server.   
+00:38:36.902 | INFO    | Flow run 'fabulous-leech' - Beginning flow run 'fabulous-leech' for flow 'bank-workflow'
+Läser kunddata från CSV...
+Antal kunder: 1000
+00:38:37.389 | INFO    | Task run 'read_customers-364' - Finished in state Completed()
+Läser transaktionsdata från CSV...
+Antal transaktioner: 100000
+00:38:38.132 | INFO    | Task run 'read_transactions-b7e' - Finished in state Completed()
+Skapar SQLite databas och tabeller...
+Databas och tabeller skapade.
+00:38:38.435 | INFO    | Task run 'create_database-28c' - Finished in state Completed()
+Laddar kunddata till databasen...
+Kunddata inlagd.
+00:38:38.744 | INFO    | Task run 'save_customers_to_db-7f1' - Finished in state Completed()
+Laddar transaktionsdata till databasen...
+Transaktionsdata inlagd.
+00:38:39.831 | INFO    | Task run 'save_transactions_to_db-221' - Finished in state Completed()
+Validerar transaktioner mot kundkonton...
+Antal ogiltiga transaktioner: 90000
+00:38:40.769 | INFO    | Task run 'validera_transaktioner-be8' - Finished in state Completed()
+🧾 Rapport med Pandas (från fil)...
+Totalt antal transaktioner: 100000
+Total summa: 2371238787.9300003 SEK
+Topp 3 avsändarländer:
+sender_country
+Sweden     80306
+Norway       951
+Denmark      918
+Name: count, dtype: int64
+00:38:41.293 | INFO    | Task run 'generera_rapport-9fb' - Finished in state Completed()
+🧾 Rapport från databasen...
+Totalt antal kunder i databasen: 1000
+Totalt antal transaktioner i databasen: 100000
+00:38:41.658 | INFO    | Task run 'generate_report-df8' - Finished in state Completed()
+00:38:41.692 | INFO    | Flow run 'fabulous-leech' - Finished in state Completed()
+ Done with no issues✅
+00:38:41.706 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8655
+(venv) PS C:\Users\Angelica\OneDrive\Escritorio\code\Datakvalitet\Projekt-bank_workflow> 

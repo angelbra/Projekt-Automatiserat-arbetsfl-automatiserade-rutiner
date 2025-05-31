@@ -1,0 +1,39 @@
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from modeller import Base, Customer, Account
+
+DATABASE_URL = 'postgresql+psycopg2://tucgirls:1234@localhost:5431/tucdb'
+
+engine = create_engine(DATABASE_URL)
+Session = sessionmaker(bind=engine)
+
+def init_db():
+    Base.metadata.create_all(bind=engine)
+    print("✅ Tablas creadas.")
+
+def insert_initial_data():
+    session = Session()
+    try:
+        ny_kund = Customer(
+            customer="Gaby Karlsson",
+            address="Lundavägen 45, Lund",
+            phone="0709876543",
+            personnummer="920202-5678"
+        )
+        nytt_konto = Account(
+            account_number="ACC987654",
+            customer=ny_kund
+        )
+        session.add(ny_kund)
+        session.add(nytt_konto)
+        session.commit()
+        print("✅ Ny testkund har lagts till.")
+    except Exception as e:
+        session.rollback()
+        print("❌ Fel vid insättning av data:", e)
+    finally:
+        session.close()
+
+if __name__ == "__main__":
+    init_db()
+    insert_initial_data()

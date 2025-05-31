@@ -1,31 +1,33 @@
-from sqlalchemy import create_engine
+# first_data_insertion.py
 from sqlalchemy.orm import sessionmaker
 from modeller import Base, Customer, Account
+from db import engine  # importera din databasanslutning
 
-# Skapa en motor och session
-engine = create_engine('postgresql+psycopg2://tucgirls:1234@localhost:5431/tucdb')
 Session = sessionmaker(bind=engine)
-session = Session()
 
-# 👩‍🦰 Lägg till en ny kund
-ny_kund = Customer(
-    customer="Klara Karlsson",
-    address="Lundavägen 45, Lund",
-    phone="0709876543",
-    personnummer="920202-5678"
-)
+def insert_initial_data():
+    session = Session()
 
-# 💳 Skapa ett konto åt kunden
-nytt_konto = Account(
-    account_number="ACC987654",
-    customer=ny_kund  # kopplar kontot till kunden
-)
+    # Kontrollera om kunden redan finns för att undvika fel
+    befintlig_kund = session.query(Customer).filter_by(personnummer="920202-5678").first()
+    if befintlig_kund:
+        print("Kunden finns redan, inga data läggs till.")
+        session.close()
+        return
 
-# Lägg till och spara
-session.add(ny_kund)
-session.add(nytt_konto)
-session.commit()
-print("✅ Ny testkund har lagts till.")
+    ny_kund = Customer(
+        customer="Antonio pynochen",
+        address="stornygata 12, Malmö",
+        phone="12340998778",
+        personnummer="941102-5598"
+    )
+    nytt_konto = Account(
+        account_number="ACHY87654",
+        customer=ny_kund
+    )
 
-# Stäng session
-session.close()
+    session.add(ny_kund)
+    session.add(nytt_konto)
+    session.commit()
+    session.close()
+    print("✅ Ny testkund har lagts till.")
