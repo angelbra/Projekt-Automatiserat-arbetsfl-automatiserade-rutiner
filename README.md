@@ -108,8 +108,6 @@ Marziyeh Akbari
 
 Angelica Bracamonte
 
-Alice Nguyen
-
 Saher Raja
 
 ---
