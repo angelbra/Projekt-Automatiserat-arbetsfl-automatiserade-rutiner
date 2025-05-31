@@ -80,7 +80,6 @@ Via Docker eller lokalt – se alembic.ini för DB-inställningar.
 ---
 
 4. Kör Alembic-migreringar
-alembic upgrade head
 
 ---
 
