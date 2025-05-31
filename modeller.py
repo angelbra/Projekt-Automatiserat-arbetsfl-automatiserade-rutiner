@@ -1,13 +1,12 @@
-from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey, Numeric
+from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey
 from sqlalchemy.orm import declarative_base, relationship
-from webcolors import names
-
-
 
 Base = declarative_base()
 
+
 class Customer(Base):
     __tablename__ = 'customers'
+
     id = Column(Integer, primary_key=True, autoincrement=True)
     customer = Column(String, nullable=False)
     address = Column(String)
@@ -16,22 +15,13 @@ class Customer(Base):
 
     accounts = relationship('Account', back_populates='customer')
 
-    def __init__(self, customer, address, phone, personnummer):
-        self.customer = customer
-        self.address = address
-        self.phone = phone
-        self.personnummer = personnummer
-        self.accounts = []
-
     def __repr__(self):
-        return f'Customer({self.customer}, {self.address}, {self.phone}, {self.personnummer})'
+        return f'<Customer {self.id}: {self.customer}, {self.address}, {self.phone}, {self.personnummer}>'
 
-    def add_account(self, account_number, customer_id):
-        self.accounts.append(account_number)
-        new_account = (Account(account_number=account_number, customer_id=customer_id))
+    def add_account(self, account_number):
+        new_account = Account(account_number=account_number, customer_id=self.id)
+        self.accounts.append(new_account)
         return new_account
-
-
 
 
 class Account(Base):
@@ -40,7 +30,6 @@ class Account(Base):
     account_number = Column(String, primary_key=True)
     customer_id = Column(Integer, ForeignKey('customers.id'), nullable=False)
 
-    # Relationships
     customer = relationship('Customer', back_populates='accounts')
 
     sent_transactions = relationship(
@@ -54,14 +43,8 @@ class Account(Base):
         back_populates='receiver_account_rel'
     )
 
-
-    def __init__(self, account_number, customer_id):
-        self.account_number = account_number
-        self.customer_id = customer_id
-
     def __repr__(self):
-        return f'{self.account_number} has balance of {self.balance}'
-
+        return f'<Account {self.account_number}>'
 
 
 class Transaction(Base):
@@ -92,20 +75,6 @@ class Transaction(Base):
         back_populates='received_transactions'
     )
 
-    def __init__(self, id, timestamp, amount, currency, sender_account, receiver_account, sender_country,
-                 sender_municipality, receiver_country, receiver_municipality, transaction_type, notes):
-        self.id = id
-        self.timestamp = timestamp
-        self.amount = amount
-        self.currency = currency
-        self.sender_account = sender_account
-        self.receiver_account = receiver_account
-        self.sender_country = sender_country
-        self.sender_municipality = sender_municipality
-        self.receiver_country = receiver_country
-        self.receiver_municipality = receiver_municipality
-        self.transaction_type = transaction_type
-        self.notes = notes
-
     def __repr__(self):
-        return f'Transaction {self.id} of {self.amount} {self.currency} from {self.sender_account} to {self.receiver_account} occurred at {self.timestamp}'
+        return (f'<Transaction {self.transaction_id}: {self.amount} {self.currency} from '
+                f'{self.sender_account} to {self.receiver_account} at {self.timestamp}>')
