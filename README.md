@@ -102,13 +102,13 @@ Se mappen notebooks/ för Jupyter Notebooks där vi:
 
 ## 👥 Gruppmedlemmar
 
-Alaa Al-Moayed
+Alaa Al-Moayed : https://github.com/alaa-najib/automated-bank-data-workflow
 
-Marziyeh Akbari
+Marziyeh Akbari : https://github.com/Marcidata/Grupp-Arbete
 
-Angelica Bracamonte
+Angelica Bracamonte : https://github.com/angelbra
 
-Saher Raja
+Saher Raja : https://github.com/Sahraj12/Gruppuppgift
 
 ---
 
